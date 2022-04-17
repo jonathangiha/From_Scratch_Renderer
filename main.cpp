@@ -57,20 +57,17 @@ int main(int argc, char* argv[])
                 }
             }
             
-            if(indices.size() == 1)
+            if(indices.size() >= 1)
             {
+                // if more than one surface present on a pixel, use the
+                // earliest one
                 // std::cout << mySurfaces[indices[0]].get_colors() << "\n";
                 render << mySurfaces[indices[0]].get_colors() << "\n";
             }
-            else if(indices.empty())
+            else
             {
                 // white
                 render << "255 255 255\n";
-            }
-            else
-            {
-                // several surfaces case. not sure
-                render << "0 0 0\n";
             }
         }
     }
