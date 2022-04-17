@@ -54,6 +54,7 @@ int main(int argc, char* argv[])
                 if(mySurfaces[i].isInside(Eigen::Vector2d(x1, x2)))
                 {
                     indices.push_back(i);
+                    break;
                 }
             }
             
